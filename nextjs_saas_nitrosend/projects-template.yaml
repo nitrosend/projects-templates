@@ -10,7 +10,7 @@ default: true
 variant_description: Clerk • Neon • Stripe Billing • Nitrosend • Vercel
 install_command: npm install
 # Pinned commit; update after pushing the template repo.
-ref: REPLACE_WITH_TEMPLATE_COMMIT
+ref: 99a5ef4bea7112400c768ef89f259eda705a1318
 repo: https://github.com/nitrosend/projects-templates/tree/main/nextjs_saas_nitrosend
 metadata:
   name: Next.js SaaS + Nitrosend Lifecycle Email
