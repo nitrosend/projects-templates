@@ -1,0 +1,62 @@
+# Registry manifest for stripe/projects-template-registry
+# (nitrosend_nextjs_saas/first-light.yaml). The copy of record lives in the
+# registry; this in-repo copy mirrors it.
+guided:
+  category: saas
+  framework: nextjs
+template: nitrosend/nextjs-saas
+variant: first-light
+default: true
+variant_description: Clerk • Neon • Stripe Billing • Nitrosend • Vercel
+install_command: npm install
+# Pinned commit; update after pushing the template repo.
+ref: REPLACE_WITH_TEMPLATE_COMMIT
+repo: https://github.com/nitrosend/projects-templates/tree/main/nextjs_saas_nitrosend
+metadata:
+  name: Next.js SaaS + Nitrosend Lifecycle Email
+  description: Subscription SaaS with Clerk auth, Neon and Stripe billing; welcome, trial-ending and payment-failed emails sent through Nitrosend's hosted sender, with an MCP server for campaigns and flows
+  owner: nitrosend
+  tags:
+    - SaaS
+    - Billing
+    - Email
+    - Next.js
+    - Nitrosend
+    - Clerk
+    - Neon
+    - MCP
+services:
+  - nitrosend/email
+  - clerk/auth
+  - neon/postgres
+  - vercel/project
+next_steps:
+  - label: Set up Stripe products
+    command: npm run setup:stripe
+  - label: Run locally
+    command: npm run dev
+  - label: Connect the Nitrosend MCP server to Claude
+    command: claude mcp add --transport http nitrosend "$NITROSEND_MCP_URL"
+  - label: Build product with Claude
+    command: claude "Help me turn this into a real product. Follow prompts/starter-to-product.md."
+  - label: Build product with Codex
+    command: codex "Help me turn this into a real product. Follow prompts/starter-to-product.md."
+  - label: Deploy
+    command: npm run deploy
+tier_plans:
+  nitrosend/email:
+    free_lowest_cost: nitrosend/free
+    starter_paid: nitrosend/pro
+    higher_scale: nitrosend/pro
+  clerk/auth:
+    free_lowest_cost: Clerk/hobby
+    starter_paid: Clerk/pro
+    higher_scale: Clerk/pro
+  neon/postgres:
+    free_lowest_cost: Neon/free
+    starter_paid: Neon/launch
+    higher_scale: Neon/launch
+  vercel/project:
+    free_lowest_cost: Vercel/hobby
+    starter_paid: Vercel/pro
+    higher_scale: Vercel/pro
