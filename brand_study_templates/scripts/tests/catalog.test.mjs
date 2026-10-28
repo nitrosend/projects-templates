@@ -17,3 +17,9 @@ test('every card and editor link has a distinct meaningful label',()=>{
 test('brand ordering is case-insensitive and locale-stable',()=>{
  assert.deepEqual(['Wise','lululemon','SKIMS','Sephora'].sort(compareNames),['lululemon','Sephora','SKIMS','Wise']);
 });
+
+test('countdown and follow-up product emails stay in the launch journey',()=>{
+ const launches=templates.filter(t=>t.study && ['Countdown','Second product','Third product'].includes(t.tags.at(-1)));
+ assert.equal(launches.length,6);
+ for(const template of launches)assert.equal(typeOf(template),'Product launches',template.name);
+});

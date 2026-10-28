@@ -9,6 +9,7 @@ function Logo() {
   </a>;
 }
 export default function Home() {
+  const brandCount = new Set(catalog.templates.flatMap(t => t.study ? [t.study.brand] : [])).size;
   return <>
     <a className="skip-link" href="#collection">Skip to templates</a>
     <header className="site-header"><Logo /><nav aria-label="Main"><a href="#collection">Email templates <span aria-hidden="true">↗</span></a></nav></header>
@@ -25,7 +26,7 @@ export default function Home() {
           <figcaption><span>Nike</span><span>Notion</span><span>The Ordinary</span></figcaption>
         </figure>
       </section>
-      <div className="hero-foot"><p><strong>36 brands.</strong> Hundreds of starting points.</p><p>Independent concepts made in Nitrosend.</p></div>
+      <div className="hero-foot"><p><strong>{brandCount} brands.</strong> Hundreds of starting points.</p><p>Independent concepts made in Nitrosend.</p></div>
       <Collection templates={catalog.templates as Template[]} />
       <section className="closing" aria-labelledby="closing-title">
         <p className="eyebrow">FROM INSPIRATION TO YOUR NEXT SEND</p>

@@ -27,6 +27,6 @@ export function typeOf(template) {
   if(['re-engagement','reminder','review request','survey','app habit','app nudge','habit streak','birthday capture'].includes(purpose))return 'Retention & feedback';
   if(['black friday','cyber monday','christmas','product offer','low stock','restock waitlist'].includes(purpose))return 'Offers & seasonal';
   if(['event invite','event details','save the date','community run','casting call','finale and invite'].includes(purpose))return 'Events & community';
-  if(/^(?:launch\b|pre-order\b|teaser$|.*\btease(?:r)?$|.*\breveal$|.*\bfeature$|feature:|product launch$|snkrs drop$)/.test(purpose))return 'Product launches';
+  if(/^(?:launch\b|pre-order\b|teaser$|.*\btease(?:r)?$|.*\breveal$|.*\bfeature$|feature:|product launch$|countdown$|second product$|third product$|snkrs drop$)/.test(purpose))return 'Product launches';
   return 'Brand stories';
 }
