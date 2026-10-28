@@ -1,0 +1,8 @@
+{
+  "name": "nitrosend-brand-study-templates",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": { "dev": "next dev", "build": "node --test scripts/tests/catalog.test.mjs && node scripts/check-catalog.mjs && next build", "start": "next start", "check": "tsc --noEmit" },
+  "dependencies": { "next": "16.4.3", "react": "19.2.5", "react-dom": "19.2.5" },
+  "devDependencies": { "@types/node": "^24.2.1", "@types/react": "^19.2.14", "@types/react-dom": "^19.2.3", "typescript": "^5.9.3" }
+}

@@ -12,3 +12,7 @@ CLI copies.
 `nextjs_saas_nitrosend` is a port of Stripe's MIT-licensed `nextjs_saas`
 starter with Nitrosend in place of the email provider. See its README for
 the environment Stripe Projects writes and the lifecycle emails it sends.
+
+## v0 template collection
+
+`brand_study_templates` is the standalone Nitrosend landing and full email-template collection for v0. It opens the existing Nitrosend guest editor and needs no credentials. See its README for local preview and catalog publication.
