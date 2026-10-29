@@ -21,3 +21,11 @@ This project owns the landing and collection only. Nitrosend owns editing, perso
 ## Review
 
 Check the hero at desktop and mobile widths, search and all filters, empty results, more designs, keyboard preview/open/close, full email scrolling and exact editor entry. Final publication to v0 and production remains subject to Kam's product sign-off.
+
+## Shared website presentation
+
+The production collection lives at `https://nitrosend.com/templates`. This forkable project is exported from the website presentation. In Nitrosend's maintained repository, change the owning web sources rather than the generated `components/TemplateCollection.tsx`, `components/TemplateShowcase.tsx`, `components/catalog-utils.mjs` or `app/showcase.css`. Then run `node scripts/export-v0.mjs /absolute/path/to/brand_study_templates` from the website repository. The same command with `--check` detects drift. The route and metadata adapters remain here. Official logo assets are copied unchanged; promotional artwork and template previews use the verified immutable publication.
+
+## Customize your fork
+
+Once you fork this project, edit the gallery components, CSS, copy and metadata directly in your own copy. You do not need the Nitrosend website repository. Keep a Nitrosend editor link paired with its original catalog ID and revision so it opens the matching design. The gallery needs no API keys; email editing, account drafts and delivery remain in Nitrosend.

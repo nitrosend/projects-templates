@@ -20,5 +20,5 @@ for(const template of templates){
 }
 assert.equal(templates.find(t=>t.id==='night_run').collection,'originals');
 assert.equal(templates.find(t=>t.id==='night_run').study,undefined);
-for(const path of ['app/page.tsx','components/collection.tsx'])assert.ok(!(await readFile(path,'utf8')).includes('—'),'No em dashes in product copy');
+for(const path of ['app/page.tsx','components/TemplateCollection.tsx'])assert.ok(!(await readFile(path,'utf8')).includes('—'),'No em dashes in product copy');
 console.log(`Verified ${templates.length} templates, ${new Set(templates.filter(t=>t.study).map(t=>t.study.brand)).size} brands, canonical previews and exact editor revisions.`);
