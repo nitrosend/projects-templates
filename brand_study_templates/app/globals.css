@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import "./showcase.css";
+
+/* The Next adapter supplies the same brand tokens as the marketing website. */
+:root {
+  --white: #FFFFFF;
+  --ink: #111111;
+  --muted: #666666;
+  --orange: #FF4D00;
+  --border: #E5E5E5;
+  --surface: #F5F5F5;
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --paper: var(--white);
+  --line: var(--border);
+  --action: color-mix(in srgb, var(--orange) 80%, var(--ink));
+  --action-hover: color-mix(in srgb, var(--orange) 70%, var(--ink));
+  --link-hover: var(--action-hover);
+  --border-strong: color-mix(in srgb, var(--border) 85%, var(--ink));
+  --caption: var(--muted);
+}
+body {margin:0}
